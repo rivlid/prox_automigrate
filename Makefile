@@ -1,4 +1,7 @@
-install:
+uv_install:
+	wget -qO- https://astral.sh/uv/install.sh | sh
+
+install: uv_install
 	uv sync
 
 prox-am:
