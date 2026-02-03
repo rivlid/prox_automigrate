@@ -13,6 +13,9 @@ build: install
 package-install: build
 	uv tool install dist/*.whl
 
+package-uninstall:
+	uv tool uninstall prox-automigrate
+
 lint:
 	uv run ruff check prox_automigrate
 
