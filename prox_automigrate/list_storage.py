@@ -44,7 +44,7 @@ def list_storage(hv_ip, vm_id, hv_username, debug):
     out = yaml.load(out, Loader=yaml.FullLoader)
     for key in out:
 # Если ключь соответствует scsi,sata,virtio,ide
-        if bool(re.match(r'(scsi|sata|virtio|ide)\d+' , key)):
+        if bool(re.match(r'(scsi|sata|efidisk|tpmstate|virtio|ide)\d+' , key)):
 # Тогда для каждого наденного на гипервизоре зфс датасета
             for i in zpool_list:
 # Ищем совпадение с дисками на виртуальной машине
